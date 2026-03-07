@@ -23,7 +23,7 @@ NOFire AI brings production context into your IDE. Before you merge, you know th
 
 ### 1. Get an API token
 
-Generate an MCP token from your [NOFire AI dashboard](https://my.nofire.ai/api-keys) under **Administration > API Tokens**.
+Generate an MCP token from your [NOFire AI dashboard](https://my.nofire.ai/dashboard/api-keys).
 
 ### 2. Set the environment variable
 
