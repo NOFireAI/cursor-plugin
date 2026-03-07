@@ -1,0 +1,49 @@
+---
+description: Use NOFire AI to code with production context. Assess deployment risk, check blast radius, and understand what's happening in production — all from your IDE.
+alwaysApply: true
+---
+
+# NOFire AI — Code with Production Context
+
+NOFire AI is available via MCP. See what breaks before it does.
+
+## Before Deploying or Merging Production Code
+
+Always run these checks before suggesting a merge:
+
+1. **Discover affected entities:**
+   `nofire_search_entities(name="<service>", cluster="prod")`
+
+2. **Assess deployment risk:**
+   `nofire_assess_deployment_risk(entity_name="<service>", cluster="prod")`
+
+3. **For HIGH/CRITICAL risk, check blast radius:**
+   `nofire_analyze_blast_radius(entity_name="<service>", cluster="prod")`
+
+4. **Review recent changes and past failures:**
+   `nofire_get_entity_changes(entity_name="<service>", cluster="prod", hours=24)`
+   `nofire_find_related_incidents(entity_name="<service>", cluster="prod", days=30)`
+
+## Risk Levels
+
+- **LOW (0-39)**: Standard deployment.
+- **MEDIUM (40-59)**: Consider canary rollout (10% → 50% → 100%).
+- **HIGH (60-79)**: Staged rollout. Deploy during business hours with team available.
+- **CRITICAL (80-100)**: Peer review + feature flags required. Never deploy Fridays.
+
+## Production Context While Coding
+
+Use NOFire to understand what's happening in production without leaving your IDE:
+
+- `nofire_get_entity_changes(entity_name="<service>", cluster="prod", hours=24)` — recent changes + VCS activity
+- `nofire_get_entity_dependencies(entity_name="<service>", cluster="prod")` — what depends on what
+- `nofire_get_cluster_summary(cluster="prod", hours=6)` — cluster-wide overview
+- `nofire_get_recent_deploys(cluster="prod", hours=6)` — what changed cluster-wide
+
+Use commit SHAs and PR references from changes to search the codebase and bridge production events back to code.
+
+## Skip NOFire AI For
+
+- Documentation-only changes (*.md files)
+- Test-only changes (no production code)
+- README updates, formatting fixes

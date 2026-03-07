@@ -1,0 +1,24 @@
+{
+  "name": "nofire",
+  "description": "AI for Prevention — see what breaks before it does, prevent change-driven incidents, stop repeating failures",
+  "version": "1.0.0",
+  "author": {
+    "name": "NOFire",
+    "email": "support@nofire.ai"
+  },
+  "homepage": "https://nofire.ai",
+  "repository": "https://github.com/nofireai/cursor-plugin",
+  "license": "MIT",
+  "keywords": [
+    "sre",
+    "reliability",
+    "incidents",
+    "deployment-risk",
+    "prevention",
+    "root-cause-analysis",
+    "change-management",
+    "kubernetes",
+    "observability"
+  ],
+  "logo": "assets/logo.svg"
+}

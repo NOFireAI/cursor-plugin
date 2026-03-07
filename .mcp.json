@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "NOFireAI": {
+      "url": "https://mcp.nofire.ai/mcp",
+      "headers": {
+        "Authorization": "Bearer ${NOFIRE_API_TOKEN}"
+      }
+    }
+  }
+}

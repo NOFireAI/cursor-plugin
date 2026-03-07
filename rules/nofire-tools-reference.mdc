@@ -1,0 +1,18 @@
+---
+description: Reference for all NOFire AI MCP tools — what each tool does and when to use it.
+alwaysApply: false
+---
+
+# NOFire AI Tool Reference
+
+| Tool | Use when |
+|------|----------|
+| `nofire_search_entities` | Discovering what infrastructure exists or verifying entity names |
+| `nofire_get_entity_dependencies` | Understanding upstream/downstream service topology |
+| `nofire_get_entity_changes` | Checking what changed recently — infra changes + VCS activity (commits, PRs) |
+| `nofire_get_entity_metrics` | Finding available Prometheus metrics and PromQL queries |
+| `nofire_assess_deployment_risk` | Scoring risk before deploying changes |
+| `nofire_analyze_blast_radius` | Understanding cascading failure impact |
+| `nofire_find_related_incidents` | Checking incident history and root cause patterns |
+| `nofire_get_cluster_summary` | Getting cluster-wide health overview — start here if no specific entity |
+| `nofire_get_recent_deploys` | Seeing cluster-wide deploy + VCS timeline |
