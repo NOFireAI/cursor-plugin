@@ -99,3 +99,7 @@ MCP tokens are **read-only**. They cannot modify infrastructure, trigger deploym
 - [Documentation](https://docs.nofire.ai/mcp/getting-started)
 - [API Token Guide](https://docs.nofire.ai/mcp/api-keys)
 - [NOFire AI](https://nofire.ai)
+
+## AI policy
+
+AI-assisted development is welcome in cursor-plugin. See [AI_POLICY.md](AI_POLICY.md).
